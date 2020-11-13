@@ -1,0 +1,55 @@
+.st_1{
+    background: linear-gradient(0.13turn, #0e0e0e, #ffffff, #bdbfc0);
+    border: 2px solid #171717;
+    height: 50px;
+    width: 200px;
+    box-shadow: inset 5px 5px #777879;
+    position: absolute;
+}
+.st_1:active{
+    transform: rotateX(90deg);
+    transition: 1s;
+}
+.st_1_1:focus{
+    outline: none;
+}
+.st_1_1{
+    background: linear-gradient(0.13turn, #0e0e0e, #ffffff, #bdbfc0);
+    border: 2px solid #171717;
+    height: 50px;
+    width: 200px;
+    box-shadow: inset 5px 5px #777879;
+    position: relative;
+    transform: rotateX(-90deg);
+    margin-top: 25px;
+}
+.st_1:active ~ .st_1_1{
+    transform: rotateX(0deg);
+    transition: 1s;
+}
+.st_2{
+    height: 50px;
+    width: 200px;
+    border: 3px solid #1b556e;
+    background: linear-gradient(0.13turn, #055842, #eeffe2, #5df7d0);
+    box-shadow: inset 5px 5px #055842;
+}
+.st_2:hover{
+    box-shadow: inset 10px 10px #1b556e;
+    transition: box-shadow 1s;
+}
+.st_3{
+    height: 50px;
+    width: 200px;
+    border: 3px solid #171717;
+    background: linear-gradient(0.13turn, #1b556e, #eaf1f3, #2db7cf);
+    box-shadow: inset 5px 5px #164458;
+}
+.st_3:hover{
+    border: 5px solid #5df7d0;
+    transition: border 0.5s;
+}
+.all{
+    margin-left: 15%;
+    margin-top: 15%;
+}

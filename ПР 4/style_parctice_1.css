@@ -1,0 +1,27 @@
+*{
+    font-size: 50px;
+}
+.first::after{
+    content: '\2018';
+}
+.second::after{
+    content: '\2019';
+}
+.third::after{
+    content: '\201A';
+}
+.fourth::after{
+    content: '\201C';
+}
+.fifth::after{
+    content: '\201D';
+}
+.sixth::after{
+    content: '\201E';
+}
+.seventh::after{
+    content: '\00AB';
+}
+.eighth::after{
+    content: '\00BB';
+}

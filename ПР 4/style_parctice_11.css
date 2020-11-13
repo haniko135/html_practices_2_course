@@ -1,0 +1,34 @@
+input[type="checkbox"]{
+    width: 50px;
+}
+input[type="checkbox"]:not(:checked){
+    height: 45px;
+    width: 100px;
+}
+[id|="message"]{
+    color: aqua;
+}
+/*[id^="message-"]{
+    color: rgb(45, 210, 30);
+}*/
+a[href$=".zip"]{
+    color: brown;
+}
+[data-action~="delete"]{
+    color: cornflowerblue;
+}
+[data-action]:not([data-action~="delete"]){
+    color: rebeccapurple;
+}
+#messages li:nth-child(even){
+    color: salmon;
+}
+h3#widget-title + ul{
+    color: seagreen;
+}
+/*h3#widget-title ~ a{
+    color: yellow;
+}*/
+#messages li:last-child a{
+    color: pink;
+}

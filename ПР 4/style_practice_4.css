@@ -1,0 +1,33 @@
+.battery_carcas{
+    width: 450px; 
+    height: 150px; 
+    border: 10px solid #000;
+    margin-bottom: 10px;
+    position: relative; 
+}
+.battery_carcas::before, .battery_carcas::after {
+    content: '';
+    position: absolute;
+}
+.battery_carcas::after { /*контакт*/
+    width: 30px;
+    height: 50px;
+    background: #000;
+    right: -30px; 
+    top: 40px;
+}
+.battery_carcas::before {
+    height: 100%; 
+}
+.low::before { 
+    width: 33%;
+    background: #ff121a;
+}
+.medium::before { 
+    width: 66%;
+    background: #ffd13a;
+}
+.high::before {
+    width: 100%;
+    background: #0eb61c;
+}

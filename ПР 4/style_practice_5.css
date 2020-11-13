@@ -1,0 +1,16 @@
+p{
+	font-size: 40px;
+	font-style: italic;
+	width: 500px;
+	padding: 10px;
+	text-align: center;
+}
+
+.radic{
+	font-size: 60px;
+}
+
+.eq{
+	border-top: 3px solid black;
+	padding-top: 16px;
+}

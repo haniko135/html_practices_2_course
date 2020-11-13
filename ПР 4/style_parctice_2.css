@@ -1,0 +1,66 @@
+p{
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.0;
+}
+ol{
+    font-size: 25px;
+}
+.first {
+    color: burlywood;
+}
+.first_first{
+    color: burlywood;
+    text-decoration: underline;
+}
+.first_first_first{
+    color: inherit;
+    text-decoration: line-through;
+}
+.second{
+    color: lightcoral;
+}
+.second_second{
+    color: lightcoral;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    text-decoration-color: lightslategrey;
+}
+.third{
+    color: mediumturquoise;
+    text-decoration: overline;
+}
+.third_third{
+    color: mediumturquoise;
+    text-decoration: line-through;
+    text-decoration-style: double;
+    text-decoration-color: gray;
+}
+.fourth{
+    color: mediumspringgreen;
+}
+.fourth_fourth{
+    color: mediumspringgreen;
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: #39e95f;
+}
+.fifth{
+    color: rgb(212, 212, 35);
+    text-decoration-line: underline;
+}
+.fifth_fifth{
+    color: rgb(212, 212, 35);
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+}
+.sixth{
+    color: black;
+    text-decoration: none;
+}
+.sixth_sixth{
+    color: black;
+    text-decoration: underline;
+    text-decoration-style: unset;
+}

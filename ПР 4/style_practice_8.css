@@ -1,0 +1,74 @@
+.all{
+    border: 1px solid #000;
+}
+.first{
+    height: 200px;
+    width: 200px;
+    margin: 20px 20px 40px 20px;
+    border: 5px solid #000;
+    text-align: center;
+    background: linear-gradient(0.13turn, #0e0e0e, #ffffff, #bdbfc0);
+    float: left;
+}
+.first:hover{
+    transform: rotate(0.2turn);
+}
+.second{
+    height: 200px;
+    width: 200px;
+    margin: 20px 20px 40px 20px;
+    border: 5px solid #000;
+    text-align: center;
+    background: linear-gradient(0.13turn, #055842, #eeffe2, #5df7d0);
+    position: relative;
+    float: left;
+}
+.second:hover{
+    transform: translate(10px, 10%);
+}
+.seventh:hover{
+    transform: skew(5deg, 5deg);
+}
+.seventh{
+    height: 200px;
+    width: 200px;
+    margin: 20px 20px 40px 20px;
+    border: 5px solid #000;
+    text-align: center;
+    background: linear-gradient(0.13turn, #1b556e, #eaf1f3, #2db7cf);
+    float: left;
+}
+.nineth{
+    height: 200px;
+    width: 200px;
+    margin: 20px 20px 40px 20px;
+    border: 5px solid #000;
+    text-align: center;
+    background: linear-gradient(0.13turn, #045318, #daffbe, #4faf17);
+    float: left;
+}
+.nineth:hover{
+    transform: scale(1.5, 1.5);
+}
+.pupil{
+    height: 200px;
+    width: 200px;
+    margin: 20px 20px 40px 20px;
+    border: 5px solid #000;
+    text-align: center;
+    background: linear-gradient(0.13turn, #070707, #ff2020, #5a0000);
+    float: left;
+}
+.pupil:hover{
+    transform: translateX(50px) rotate(50deg) translateY(100px);
+}
+p{
+    width: 200px;
+    height: auto;
+    text-align: center;
+    float: left;
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 25px 0px 25px;
+}
