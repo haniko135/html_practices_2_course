@@ -1,0 +1,31 @@
+.backgrnd{									/*фон*/
+	background-image: url(hunt.jpg);
+}
+h1.main_text {								/*заголовок*/
+	color: #fcf2c0;
+	font-family: Serif;
+	line-height: 2.0;
+	font-size: 60pt;
+	font-weight: bold;
+	text-align: center;
+}
+header.main_text_head {
+	background-color: #c2b98f; 
+}
+a{												/*ссылки*/
+	text-decoration: none;
+	color: #fcf2c0;
+}
+a:hover{										/*подсвечивание ссылки*/
+	color: #e3d27f;
+}
+.menu{										/*менюшка*/
+	color: #c2b98f;
+	font-family: serif;
+	font-size: 28pt;
+	font-weight: bold;
+	text-align: center;
+	border: 2px solid;
+	background-color: #c2b98f;
+	line-height: 1.5;
+}
