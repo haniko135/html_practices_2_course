@@ -1,0 +1,10 @@
+.backgrnd{
+    background-color: rgb(255, 254, 183);
+}
+.text_position{
+    text-align: left;
+    margin-top: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    color: #161616;
+}

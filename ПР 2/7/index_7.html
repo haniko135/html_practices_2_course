@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Canvas</title>
+        <script>
+            window.onload = function(){
+                let drawCanvas = document.getElementById('circles');
+                if(drawCanvas && drawCanvas.getContext){
+                    var context = drawCanvas.getContext('2d');
+                    // Круг в круге
+                    context.strokeStyle = "#000";
+                    context.fillStyle = "#fc0";
+                    context.beginPath();
+                    context.arc(100,100,50,0,Math.PI*2,true);
+                    context.closePath();
+                    context.stroke();
+                    context.fill();
+
+                    context.strokeStyle = "#000";
+                    context.fillStyle = "#eeeeee";
+                    context.beginPath();
+                    context.arc(100,100,25,0,Math.PI*2,true);
+                    context.closePath();
+                    context.stroke();
+                    context.fill();
+
+                    //квадрат в квадрате
+                    context.strokeStyle = "#000";
+                    context.fillStyle = "#fc0";
+                    context.beginPath();
+                    context.moveTo(210,100);
+                    context.lineTo(310,100);
+                    context.lineTo(310,200);
+                    context.lineTo(210,200);
+                    context.closePath();
+                    context.stroke();
+                    context.fill();
+
+                    context.strokeStyle = "#000";
+                    context.fillStyle = "#eeeeee";
+                    context.beginPath();
+                    context.moveTo(240,120);
+                    context.lineTo(290,120);
+                    context.lineTo(290,170);
+                    context.lineTo(240,170);
+                    context.closePath();
+                    context.stroke();
+                    context.fill();
+                    
+                    //треугольник в треугольнике
+                    context.strokeStyle = "#000";
+                    context.fillStyle = "#fc0";
+                    context.beginPath();
+                    context.moveTo(400,50);
+                    context.lineTo(510,50);
+                    context.lineTo(510,200);
+                    context.closePath();
+                    context.stroke();
+                    context.fill();
+
+                    context.strokeStyle = "#000";
+                    context.fillStyle = "#eeeeee";
+                    context.beginPath();
+                    context.moveTo(430,80);
+                    context.lineTo(490,80);
+                    context.lineTo(480,150);
+                    context.closePath();
+                    context.stroke();
+                    context.fill();
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <canvas id="circles" width="700" height="700">
+            Ваш браузер не поддерживает canvas
+        </canvas>
+    </body>
+</html>
