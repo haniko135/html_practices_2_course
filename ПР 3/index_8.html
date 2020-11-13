@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Forms part 2</title>
+        <style>
+            #ischeckedhtml:checked ~ #html{
+                background-color: yellow;
+            }
+            #ischeckedcss:checked ~ #css{
+                background-color: yellow;
+            }
+            #ischeckedjs:checked ~ #js{
+                background-color: yellow;
+            }
+            #ischeckedu:checked ~ #u{
+                background-color: yellow;
+            }
+            #html, #css, #js, #u{
+                background-color: white;
+            }
+            label{
+                font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                font-size: 26px;
+            }
+            form{
+                float: left;
+                margin-right: 2%;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <input type="checkbox" name="lang" id="ischeckedhtml"><label for="ischeckedhtml" id="html">HTML</label><br>
+            <input type="checkbox" name="lang" id="ischeckedcss"><label for="ischeckedcss" id="css">CSS</label><br>
+            <input type="checkbox" name="lang" id="ischeckedjs"><label for="ischeckedjs" id="js">JS</label><br>
+            <input type="checkbox" name="lang" id="ischeckedu"><label for="ischeckedu" id="u">U</label>
+        </form>
+        <br><br><br>
+        <input type="submit" name="go">
+    </body>
+</html>

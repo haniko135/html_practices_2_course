@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Forms </title>
+        <style>
+            .span_invalid::before{
+                color: red;
+                content: '\274B';
+            }
+            .span_valid::before{
+                color: #00ff00;
+                content: '\2714';
+            }
+            input:invalid + .span_invalid::before{
+                visibility: visible;
+            }
+            input:invalid ~ .span_valid::before{
+                visibility: hidden;
+            }
+            input:valid + .span_invalid::before{
+                visibility: hidden;
+            }
+            input:valid ~ .span_valid::before{
+                visibility: visible;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <legend>Ваша информация</legend>
+            <p>
+                <label for="isname">Имя пользователя </label>
+                <input type="text" id="isname" required="required" placeholder="Введите имя">
+                <span class="span_invalid"></span>
+                <span class="span_valid"></span>
+            </p>
+            <p>
+                <label for="number">Сколько вам лет? </label>
+                <input type="number" id="number" required="required" placeholder="Введите возраст">
+                <span class="span_invalid"></span>
+                <span class="span_valid"></span>
+            </p>
+            <p>
+                <label for="work">Вы учитесь или работаете? </label>
+                <input type="text"required="required" id="work">
+                <span class="span_invalid"></span>
+                <span class="span_valid"></span>
+            </p>
+            <p>
+                <label for="time">Сколько у вас свободного времени? </label>
+                <input type="text" required="required" id="time">
+                <span class="span_invalid"></span>
+                <span class="span_valid"></span>
+            </p>
+            <p>
+                <label for="freeTime">Что вы обычно делете в свободное время? </label>
+                <input type="text" id="freeTime">
+            </p>
+            <p><input type="submit" value="Отправить"></p>
+        </fieldset>
+    </body>
+</html>
