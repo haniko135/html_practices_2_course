@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 9</title>
+    </head>
+    <body>
+        <h1>PRACTICE 9</h1>
+        <script>
+            // 1 задание
+
+            let str1 = 'я учу javascript!';
+            alert(str1.length);
+
+            // 2 
+
+            let str2 = 'я учу javascript!';
+            alert(str2.substr(2,3));
+            alert(str2.slice(2,5));
+            alert(str2.substring(2,5));
+
+            // 3
+            let str3 = 'я учу javascript!';
+            alert(str3.indexOf('учу'));
+
+            // 4
+
+            let str4 = 'Не хочу учиться, а хочу жениться!';
+            let n = 35;
+            let result = '';
+            if(str4.length > n){
+                result = str4.slice(0, n) + '...';
+            }
+            else if(str4.length < n){
+                result = str4;
+            }
+            alert(result);
+
+        </script>
+    </body>
+</html>
