@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 16</title>
+    </head>
+    <body>
+        <h1>PRACTICE 16</h1>
+        <script>
+            //1 задание
+
+            let obj1 = {green: 'зеленый', red: 'красный', blue: 'голубой'};
+            for(key in obj1){
+                document.writeln(key);
+            }
+            document.write('<br>');
+            for(key in obj1){
+                document.writeln(obj1[key]);
+            }
+            document.write('<br>');
+            document.write('<br>');
+            //2 задание
+            let obj2 = {Коля: 200, Вася: 300, Петя: 400};
+            for (key in obj2) {
+                document.writeln((key) + ' - зарплата ' + (obj2[key]) + ' долларов');
+                document.write('<br>');
+            }
+            
+        </script>
+    </body>
+</html>
