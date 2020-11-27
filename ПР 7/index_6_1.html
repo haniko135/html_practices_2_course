@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 6.1</title>
+    </head>
+    <body>
+        <p>Я здесь.</p>
+        <p>Я тут</p>
+        <p>Я там</p>
+        <button type="button" onclick="press()">Жмакай!</button>
+        <script>
+            function press(){
+                let one = document.getElementsByTagName('p');
+                let textOne = "Я ушёл";
+                let textTwo = "Я тоже";
+                one[0].innerHTML = textOne;
+                one[2].innerHTML = textTwo;
+            }
+        </script>
+    </body>
+</html>

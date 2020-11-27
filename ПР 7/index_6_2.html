@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 6.2</title>
+    </head>
+    <body>
+        <p><span></span>Я здесь</p>
+        <p><span></span>Я тут</p>
+        <p><span></span>Я там</p>
+        <p><span></span>Мы тут и там</p>
+        <p><span></span>Они кругом</p>
+        <p><span></span>Он рядом</p>
+        <p><span></span>Она наверху</p>
+        <p><span></span>Вы внизу</p>
+        <p><span></span>А мы слетели с катушек</p>
+        <button type="button" onclick="press()">Жмакай!</button>
+        <script>
+            function press(){
+                let two = document.getElementsByTagName('span');
+                for(let i = 0; i < two.length; i++){
+                    two[i].innerHTML = i + '. ';
+                }
+            }
+        </script>
+    </body>
+</html>
