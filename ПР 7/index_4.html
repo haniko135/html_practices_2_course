@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 4</title>
+    </head>
+    <body>
+        <input id="text" value="Алё, мышь, здарова. Ну ты чё, как там?" style="width: 300px;">
+        <button type="button" onclick="press(this)">По литературному</button><br><br><br>
+        <input id="smth" style="width: 250px;" value="Здоровенькi були, родичi гарбузовi">
+        <button type="button" onclick="change1()">Исчезнуть</button>
+        <button type="button" onclick="change2()">Появиться</button><br><br><br>
+        <script>
+            function press(){
+                let txt = document.getElementById('text');
+                txt.value='Добрый день, уважаемый. Вы не заняты? Могу ли я справиться о вашем самочувствии?';
+                txt.style.color = 'brown';
+                txt.style.width = '700px';
+                txt.style.borderRadius = '20px';
+            }
+            function change1(){
+                let hey = document.getElementById('smth');
+                hey.style.display = 'none';
+            }
+            function change2(){
+                let hey = document.getElementById('smth');
+                hey.style.display = 'inline-block';
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 5</title>
+    </head>
+    <body>
+        <p id="text">
+            Шэнь Цинцю был превращен в человека-свинью своим учеником и был мучим им каждый день своего жалкого существования в кувшине из-под овощей.
+            <br><br><i>Путь Гордого и Бессмертного Демона (оригинал)</i>.
+        </p>
+        <button type="button" onclick="press(this)">Изменить</button><br><br><br>
+        <script>
+            function press(){
+                let txt = document.getElementById('text');
+                txt.style.fontSize = '26px';
+                txt.style.fontStyle = 'italic';
+            }
+        </script>
+    </body>
+</html>

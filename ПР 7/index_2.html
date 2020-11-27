@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 2</title>
+    </head>
+    <body>
+        <input id="text" value="Ужасное будущее">
+        <button type="button" onclick="press()">Поменять концовку</button><br><br><br>
+        <img src="2.2.jpg" alt="Бинцю" id="image">
+        <button type="button" onclick="change()">Поменять концовку</button><br><br><br>
+        <script>
+            function press(){
+                let txt = document.getElementById('text');
+                txt.value = "Прекасное будущее"
+            }
+            function change(){
+                let img = document.getElementById('image');
+                img.src="2.1.jpg";
+            }
+        </script>
+    </body>
+</html>

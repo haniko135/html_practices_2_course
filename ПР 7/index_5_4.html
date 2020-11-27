@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 5.2</title>
+    </head>
+    <body>
+        <p>
+            <a href="https://mangalib.me" id="a1">Ссылка 1 <span id="num1"></span></a>
+            <a href="https://tl.rulate.ru" id="a2">Ссылка 2 <span id="num2"></span></a>
+            <a href="https://vk.com" id="a3">Ссылка 3 <span id="num3"></span></a>
+        </p>
+        <button type="button" onclick="press()">Нажмите</button>
+        <script>
+            function press(){
+                let one = document.getElementById('a1');
+                let two = document.getElementById('a2');
+                let three = document.getElementById('a3');
+                let text1 = String(one.href);
+                let text2 = String(two.href);
+                let text3 = String(three.href);
+                let first = document.getElementById('num1');
+                let second = document.getElementById('num2');
+                let third = document.getElementById('num3');
+                first.innerHTML = text1;
+                second.innerHTML = text2;
+                third.innerHTML = text3; 
+            }
+        </script>
+    </body>
+</html>

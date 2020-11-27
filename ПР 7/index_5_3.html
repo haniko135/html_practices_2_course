@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 5.2</title>
+    </head>
+    <body>
+        <p>
+            <input type="text" value="" id="one" placeholder="Введи в меня текст" onchange="press()"><span id="two"></span>
+        </p>
+        <script>
+            function press(){
+                let one = document.getElementById('one');
+                let text = String(one.value);
+                one.style.border = '3px solid black';
+                let res = document.getElementById('two');
+                res.innerHTML = text;
+            }
+        </script>
+    </body>
+</html>

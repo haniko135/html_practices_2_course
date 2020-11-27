@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 5.2</title>
+    </head>
+    <body>
+        <p>
+            <input type="text" value="" id="one"> + <input type="text" value="" id="two"> = <span id="res">0</span>
+        </p>
+        <button type="submit" onclick="press(this)">Нажмите чтоб сложить</button><br><br><br>
+        <script>
+            function press(){
+                let one = document.getElementById('one');
+                let two = document.getElementById('two');
+                let result = Number(one.value) + Number(two.value);
+                let res = document.getElementById('res');
+                res.innerHTML = result;
+            }
+        </script>
+    </body>
+</html>
