@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 7.4</title>
+    </head>
+    <body onload="start()">
+        <img id="image" src="2.1.jpg">
+        <script>
+            let i = 0;
+            function start(){
+                let image = document.getElementById("image");
+                window.setInterval('slide()', 5000);
+            }
+            function slide(){
+                if(i == 0){
+                    image.src = "2.2.jpg";
+                    i++;
+                }
+                else if(i == 1){
+                    image.src = "7_4_3.png";
+                    i++;
+                }
+                else if(i == 2){
+                    image.src = "7_4_4.png";
+                    i++;
+                }
+                else if(i == 3){
+                    image.src = "2.1.jpg";
+                    i = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

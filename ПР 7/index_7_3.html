@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 7.3</title>
+    </head>
+    <body onload="start()">
+        <p id="clock" style="font-size: xx-large; font-weight: 800;"></p>
+        <script>
+            function start(){
+                let date = new Date();
+                let hour = date.getHours();
+                let minute = date.getMinutes();
+                let second = date.getSeconds();
+                if (hour < 10) {
+                    hour = "0" + hour;
+                }
+                if (minute < 10){
+                    minute = "0" + minute;
+                } 
+                if (second < 10) {
+                    second = "0" + second;
+                }
+                document.getElementById("clock").innerHTML = hour + ":" + minute + ":" + second;
+                setTimeout("start()", 1000);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 7.5</title>
+    </head>
+    <body>
+        <p>
+            <img id="image" src="2.1.jpg">
+        </p>
+        <input type="submit" value="START" onclick="start()">
+        <input type="submit" value="STOP" onclick="stop()">
+        <script>
+            let i = 0;
+            function start(){
+                let image = document.getElementById("image");
+                window.timerID = window.setInterval('slide()', 1000);
+            }
+            function slide(){
+                if(i == 0){
+                    image.src = "2.2.jpg";
+                    i++;
+                }
+                else if(i == 1){
+                    image.src = "7_4_3.png";
+                    i++;
+                }
+                else if(i == 2){
+                    image.src = "7_4_4.png";
+                    i++;
+                }
+                else if(i == 3){
+                    image.src = "7_5_5.jpg";
+                    i++;
+                }
+                else if(i == 4){
+                    image.src = "2.1.jpg";
+                    i=0;
+                }
+            }
+            
+            function stop(){
+                window.clearInterval(window.timerID);
+            }
+        </script>
+    </body>
+</html>

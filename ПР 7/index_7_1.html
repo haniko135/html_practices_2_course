@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 7.1</title>
+    </head>
+    <body>
+        <input value="1" type="text" id="smth">
+        <button type="button" onclick="press()">Жмакай!</button>
+        <script>
+            function press(){
+                window.setInterval(time, 100);
+            }
+            function time(){
+                let i = document.getElementById('smth')
+                i.value = parseInt(i.value) + 1;
+            }
+        </script>
+    </body>
+</html>
