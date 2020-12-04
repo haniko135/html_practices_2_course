@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 11</title>
+        <style>
+            body{
+                margin: 20px;
+            }
+            .carousel{
+                position: relative;
+                width: 1000px;
+                padding: 10px 60px;
+                border: 1px solid #505050;
+                border-radius: 20px;
+                background: rgb(224, 207, 150);
+            }
+            .carousel img{
+                width: 450px;
+                height: 350px;
+                display: block;
+            }
+            .arrow {
+                position: absolute;
+                top: 250px;
+                padding: 0;
+                background: #ddd;
+                border-radius: 15px;
+                border: 1px solid gray;
+                font-size: 50px;
+                line-height: 50px;
+                color: #444;
+                display: block;
+            }
+            .arrow:focus {
+                outline: none;
+            }
+            .arrow:hover {
+                background: #ccc;
+                cursor: pointer;
+            }
+            .left {
+                left: 10px;
+            }
+            .right {
+                right: 10px;
+            }
+            .gallery {
+                width: 990px;
+                height: auto;
+                overflow: hidden;
+            }
+
+            .gallery ul {
+                height: 400px;
+                width: 9999px;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                transition: margin-left 550ms;
+                font-size: 0;
+            }
+
+            .gallery li {
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="carousel" class="carousel">
+            <button class="arrow left">&lArr;</button>
+            <div class="gallery">
+                <ul class="images">
+                    <li><img src="2.1.jpg"></li>
+                    <li><img src="2.2.jpg"></li>
+                    <li><img src="7_4_3.png"></li>
+                    <li><img src="7_4_4.png"></li>
+                    <li><img src="7_5_5.jpg"></li>
+                    <li><img src="11_6.jpg"></li>
+                    <li><img src="11_7.jpg"></li>
+                    <li><img src="11_8.jpg"></li>
+                </ul>
+            </div>
+           <button class="arrow right">&rAarr;</button>
+        </div>
+        <script>
+            let i = 1;
+            for(let li of carousel.querySelectorAll('li')) {
+                li.style.position = 'relative';
+                li.insertAdjacentHTML('beforeend', `<span style="position:absolute;left:0;top:0">${i}</span>`);
+                i++;
+            }
+            let width = 200;
+            let count = 4;
+
+            let list = carousel.querySelector('ul');
+            let listElems = carousel.querySelectorAll('li');
+
+            let position = 0; // положение ленты прокрутки
+
+            carousel.querySelector('.left').onclick = function() {
+                position += width * count;
+                position = Math.min(position, 0)
+                list.style.marginLeft = position + 'px';
+            };
+
+            carousel.querySelector('.right').onclick = function() {
+                position -= width * count;
+                position = Math.max(position, -width * (listElems.length - count));
+                list.style.marginLeft = position + 'px';
+            };
+        </script>
+    </body>
+</html>
