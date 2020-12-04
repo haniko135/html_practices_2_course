@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 10</title>
+        <style>
+            body{
+                margin: 0 auto;
+                width: 600px;
+            }
+            p {
+                margin: 0;
+                padding: 0 0 .5em;
+            }
+            .message{
+                background-color: darksalmon;
+                position: relative;
+                border-top: 3px solid maroon;
+                padding: 20px;
+            }
+            .x{
+                position: absolute;
+                font-size: 110%;
+                top: 0;
+                color:maroon;
+                right: 10px;
+                display: block;
+                width: 25px;
+                height: 25px;
+                border: none;
+                background: transparent;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+           <div class="message">
+               <p>
+                <h2>Шэнь Цинцю:</h2>
+                - Попаданец.<br>
+                - Глава пика ЦинЦзин.<br>
+                - Прославленный заклинатель.<br>
+                - Мастер меча Сюя.
+               </p>
+           </div>
+           <div class="message">
+               <p>
+                <h2>Лю Цингэ:</h2>
+                - Заклинатель.<br>
+                - Глава пика БайЧжань.<br>
+                - Известан как Бог Войны.<br>
+                - Мастер меча ЧенЛуань.
+               </p>
+           </div>
+           <div class="message">
+               <p>
+                <h2>Юэ Цинъюань:</h2>
+                - Глава школы заклинателей Цанцюн.<br>
+                - Глава пика ЦюнДин.<br>
+                - Обладает безусловной репутацией.<br>
+                - Мастер меча СюаньСу.
+               </p>
+           </div>
+        </div>
+        <script>
+            let elements = document.querySelectorAll('.message');
+            for(let el of elements) {
+                el.insertAdjacentHTML("afterbegin", '<button class="x">&times;</button>');
+                el.firstChild.onclick = () => el.remove();
+            }
+        </script>
+    </body>
+</html>
