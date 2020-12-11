@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 12</title>
+        <style>
+            .list span:hover {
+                font-style: italic;
+            }
+
+            .list span {
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <ul id="list" class="list">
+            <li>Заклинатели
+                <ul>
+                    <li>ЦанЦюн
+                        <ul>
+                            <li>Лю Цинге</li>
+                            <li>Шэнь Цинцю</li>
+                            <li>Юэ Цинъюань</li>
+                            <li>Ци ЦинЦи</li>
+                            <li>Му Цинфан</li>
+                            <li>Ян Исюань</li>
+                        </ul>
+                    </li>
+                    <li>ХуанХуа
+                        <ul>
+                            <li>Мастер дворца ХуанХуа</li>
+                            <li>Внучка мастера</li>
+                            <li>Гуньи Сяо</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Демоны
+                <ul>
+                    <li>Ло Бинхэ</li>
+                    <li>Мобэй Цзюнь</li>
+                    <li>Ша Хуалин</li>
+                    <li>ЧжуЧжи Лан</li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            for (let li of list.querySelectorAll('li')) {
+                let span = document.createElement('span');
+                li.prepend(span);
+                span.append(span.nextSibling);
+            }
+            list.onclick = function(event) {
+
+                if (event.target.tagName != 'SPAN') {
+                    return;
+                }
+
+                let children = event.target.parentNode.querySelector('ul');
+                if (!children) return; 
+                children.hidden = !children.hidden;
+            }
+        </script>
+    </body>
+</html>

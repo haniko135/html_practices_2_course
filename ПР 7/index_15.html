@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 15</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #mainImg {
+                border: solid 1px #ccc;
+                width: 100%;
+                height: 650px;
+                padding: 5px;
+            }
+            #gallery a {
+                border: solid 1px #ccc;
+                width: 200px;
+                height: 200px;
+                padding: 3px;
+                margin: 2px;
+                float: left;
+            }
+            #gallery a:hover {
+                border-color: #FF9900;
+            }
+            #gallery li {
+                list-style: none;
+            }
+            #gallery {
+                margin: 0;
+                padding: 0;
+            }
+            a img{
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div><img id="mainImg" src="бог войны.png"></div>
+        <ul id="gallery">
+            <li>
+                <a href="7_4_4.png"><img src="7_4_4.png"></a>
+            </li>
+            <li>
+                <a href="Ой дураааак.png"><img src="Ой дураааак.png"></a>
+            </li>
+            <li>
+                <a href="7_5_5.jpg"><img src="7_5_5.jpg"></a>
+            </li>
+            <li>
+                <a href="7_4_3.png"><img src="7_4_3.png"></a>
+            </li>
+            <li>
+                <a href="Пей Мин.png" ><img src="Пей Мин.png"></a>
+            </li>
+            <li>
+                <a href="Цинге.png"><img src="Цинге.png"></a>
+            </li>
+        </ul>
+        <script>
+            gallery.onclick = function(event) {
+                let smallImg = event.target.closest('a');
+
+                if (!smallImg) return;
+                showImage(smallImg.href);
+                event.preventDefault();
+            }
+
+            function showImage(href) {
+                mainImg.src = href;
+            }
+        </script>
+    </body>
+</html>

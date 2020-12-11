@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 13</title>
+        <style>
+            .tooltip{
+                position: fixed;
+                padding: 10px 5px;
+                border: 1px solid rgb(75, 59, 28);
+                border-radius: 4px;
+                text-align: center;
+                font-family: 'Roboto', sans-serif;
+                font-size: 12px;
+                color: #524833;
+                background: #dfdfdf;
+                box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li>Заклинатели
+                <ul>
+                    <li data-tooltip="Самая большая школа заклинательства">ЦанЦюн
+                        <ul>
+                            <li data-tooltip="Лорд пика Сотни Сражений">Лю Цинге</li>
+                            <li data-tooltip="Лорд Тихого пика">Шэнь Цинцю</li>
+                            <li data-tooltip="Лорд пика Небесного Свода, глава школы">Юэ Цинъюань</li>
+                            <li data-tooltip="Лорд пика Бессмертных Красавиц">Ци ЦинЦи</li>
+                            <li data-tooltip="Лорд пика Тысячи Трав">Му Цинфан</li>
+                            <li data-tooltip="Ученик пика Сотни Сражений">Ян Исюань</li>
+                        </ul>
+                    </li>
+                    <li data-tooltip="Вторая по значимости школа заклинателей">ХуанХуа
+                        <ul>
+                            <li>Мастер дворца ХуанХуа</li>
+                            <li>Внучка мастера</li>
+                            <li data-tooltip="ученик дворца ХуанХуа">Гуньи Сяо</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>Демоны
+                <ul>
+                    <li data-tooltip="Правитель Трёх миров, король демонов">Ло Бинхэ</li>
+                    <li data-tooltip="Король Севера">Мобэй Цзюнь</li>
+                    <li data-tooltip="Наследница Запада">Ша Хуалин</li>
+                    <li data-tooltip="Племянник бывшего короля демонов">ЧжуЧжи Лан</li>
+                </ul>
+            </li>
+        </ul>
+        <script>
+            let tooltipDiv;
+            document.onmouseover = function(event) {
+                let focus = event.target;
+
+                // если у нас есть подсказка...
+                let tooltipData = focus.dataset.tooltip;
+                if (!tooltipData) return;
+
+                // ...создадим элемент для подсказки
+
+                tooltipDiv = document.createElement('div');
+                tooltipDiv.className = 'tooltip';
+                tooltipDiv.innerHTML = tooltipData;
+                document.body.append(tooltipDiv);
+                let coords = focus.getBoundingClientRect();
+
+                let left = coords.left +  (focus.offsetWidth - tooltipDiv.offsetWidth) / 2;
+                if (left < 0) left = 0;
+                let top = coords.top - tooltipDiv.offsetHeight - 5;
+                if (top < 0) {
+                    top = coords.top + focus.offsetHeight + 5;
+                }
+
+                tooltipDiv.style.left = left + 'px';
+                tooltipDiv.style.top = top + 'px';
+            };
+
+            document.onmouseout = function(e) {
+                if (tooltipDiv) {
+                    tooltipDiv.remove();
+                    tooltipDiv = null;
+                }
+            };
+        </script>
+    </body>
+</html>
