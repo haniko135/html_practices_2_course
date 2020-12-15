@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PRACTICE 1</title>
+        <style>
+            #telega{
+                position: relative;
+                cursor: grab;
+            }
+            img{
+                width: 30%;
+                height: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <img id="telega" src="телега.png">
+        <script>
+            telega.onclick = function() {
+                let start = Date.now();
+                let timer = setInterval(function() {
+                    let passed = Date.now() - start;
+                    telega.style.left = passed / 7 + 'px';
+                    telega.style.top = passed / 3 + 'px';
+                    if (passed > 2000) clearInterval(timer);
+
+                }, 20);
+            }
+        </script>
+    </body>
+</html>
